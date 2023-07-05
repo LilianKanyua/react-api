@@ -1,23 +1,22 @@
 import React,{useState,useEffect} from "react";
 
 
-
     
-        const Products = () =>{
-            const [products, setProducts] = useState([]);
+        const Product = () =>{
+            const [product, setProduct] = useState([]);
             const [loading, setLoading] = useState(false);
             useEffect(() => {
                 (async()=>{
-                    await getProducts();
+                    await getProduct();
                 })()
             }, [])
-            console.log({products});
-            const getProducts = async ()=>{
+            console.log({product});
+            const getProduct = async ()=>{
                 try{
                     setLoading(true);
-                    const response = await fetch('https://dummyjson.com/products')
+                    const response = await fetch('https://dummyjson.com/products/1')
                     const result = await response.json();
-                    setProducts(result.products);
+                    setProduct(result.product);
                     setLoading(false);
                 }
                 catch(error){
@@ -29,13 +28,17 @@ import React,{useState,useEffect} from "react";
             }
             return(
                 <div>
-                    <h1>All Products</h1>
-                    {products.map(item => (
+                    <h1>Product</h1>
+                    {product.map(item => (
                     <div key={item.id}>
-                    <img src = {item.images[0]} alt ="product "/>
+                        <img src = {item.images} alt ="product "/>
                     <h2>{item.title}</h2>
+                    <p>{item.description}</p>
+                    <p>{item.brand}</p>
                     <p>{item.price}</p>
                     <p>{item.discountPercentage}</p>
+                    <p>{item.rating}</p>
+                    <p>{item.stock}</p>
 
                    </div>
                    ))}
@@ -43,4 +46,4 @@ import React,{useState,useEffect} from "react";
             );
         };
 
-export default Products
+export default Product

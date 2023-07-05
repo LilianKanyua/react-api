@@ -1,5 +1,8 @@
 import React,{useState} from 'react';
 import './style.css'
+import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
+
  const Login = () => {
      const [username,setUsername]= useState('');
      const [password,setPassword] = useState('');
@@ -11,6 +14,7 @@ import './style.css'
         const data = {
             username : username,
             password : password
+
         }
         try{
             const response = await fetch('https://dummyjson.com/auth/login',{
