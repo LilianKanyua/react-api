@@ -45,7 +45,7 @@ import { Link } from 'react-router-dom';
            
              <br/>
              <br/>
-             <button type='submit'>Login</button>
+             <Link to={`/Products/`} ><button type="submit" className="button">Login</button></Link>
              </form>
          </div>
          
