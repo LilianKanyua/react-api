@@ -1,4 +1,5 @@
 import React,{useState,useEffect} from "react";
+import { Link } from 'react-router-dom';
 
 
 
@@ -37,6 +38,7 @@ import React,{useState,useEffect} from "react";
                     <h2>{item.title}</h2>
                     <p>{item.price}</p>
                     <p>{item.discountPercentage}</p>
+                    <Link to={`/Product/`} ><button type="submit" className="button">View</button></Link>
 
                    </div>
                    ))}
