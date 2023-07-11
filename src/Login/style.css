@@ -8,7 +8,7 @@
     border:solid 1px wheat;
     border-radius: 5px;
 }
-.form >button{
+.button{
     border:none;
     border-radius: 5px;
     background-color: rgb(34, 114, 114);
