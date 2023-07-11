@@ -1,6 +1,6 @@
 import React,{useState,useEffect} from "react";
 import { Link } from 'react-router-dom';
-
+import './style.css';
 
 
 
@@ -30,11 +30,11 @@ import { Link } from 'react-router-dom';
                 return <h2>Loading ... </h2>
             }
             return(
-                <div>
+                <div className="shelf">
                     <h1>All Products</h1>
                     {products.map(item => (
                     <div key={item.id}>
-                    <img src = {item.images[0]} alt ="product "/>
+                    <img src = {item.images[0]} alt ="product " className="images"/>
                     <h2>{item.title}</h2>
                     <p>{item.price}</p>
                     <p>{item.discountPercentage}</p>

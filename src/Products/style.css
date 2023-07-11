@@ -1,0 +1,31 @@
+.shelf{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-left: 80px;
+    gap: 50px;
+    margin-top: 3%;
+}
+#heading{
+    font-size: 50px;
+    color: #2B8A3E;
+    margin-left: 40%;
+}
+.view{
+    padding: 15px;
+    border-radius: 10px;
+    background-color: #2B8A3E;
+}
+.images{
+    border: none;
+    margin-top: 8%;
+    border-radius: 20px;
+    width: 350px;
+    height: 250px;
+}
+
+
+
+
+
+
+
